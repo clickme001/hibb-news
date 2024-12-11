@@ -1,1 +1,34 @@
- 
+backend:
+  name: github
+  repo: clickme001/hibb-news
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: YOUR_UPLOADCARE_PUBLIC_KEY
+
+collections:
+  - name: "newsletters"
+    label: "Newsletters"
+    folder: "content/newsletters"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" } 
