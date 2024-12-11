@@ -14,6 +14,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Featured Image", name: "featured_image", widget: "image", required: false }
       - { label: "Content", name: "body", widget: "markdown" }
   - name: "news"
     label: "News"
